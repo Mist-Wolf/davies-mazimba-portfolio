@@ -1,4 +1,4 @@
-import {Linkedin, Mail, Github, X, MessageCircle, PhoneCallIcon } from 'lucide-react';
+import {Linkedin, Mail, Github, MessageCircle, PhoneCallIcon } from 'lucide-react';
 import 'primeicons/primeicons.css';
 
 
@@ -31,9 +31,7 @@ export const contact: ContactItem[] = [
   },
   {
     label: "Call +260 970193419",
-    href: "#",
+    href: "tel:+260970193419",
     icon: <PhoneCallIcon />,
-    external: true,
   }
 ];
-

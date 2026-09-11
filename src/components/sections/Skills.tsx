@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { Card, CardContent } from "../ui/card";
 import { Button } from "../ui/button";// adjust imports
 import { skills as skillsData } from "../../data/skills"; // your skills data file
@@ -12,7 +13,8 @@ interface SkillsProps {
 export function Skills({ dark, activeTab, setActiveTab }: SkillsProps) {
   return (
     <section id="skills" className="max-w-6xl mx-auto px-6 py-12">
-      <h2 className="text-3xl font-bold text-green-400 mb-6">Skills</h2>
+      <p className="text-sm uppercase tracking-[0.25em] text-emerald-300">What I work with</p>
+      <h2 className={`mt-2 text-4xl font-bold tracking-tight mb-8 ${dark ? "text-white" : "text-slate-900"}`}>Skills</h2>
 
       {/* Tabs */}
       <div className="flex flex-wrap gap-2 mb-6">
@@ -39,10 +41,15 @@ export function Skills({ dark, activeTab, setActiveTab }: SkillsProps) {
       {/* Skill Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {skillsData[activeTab].map((skill) => (
-          <Card
+          <motion.div
             key={skill.title}
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+          <Card
             className={`transition transform hover:-translate-y-1 hover:shadow-xl rounded-2xl ${
-              dark ? "bg-white/10" : "bg-gray-100"
+              dark ? "bg-white/[0.07] border-white/10" : "bg-gray-100"
             }`}
           >
             <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
@@ -67,6 +74,7 @@ export function Skills({ dark, activeTab, setActiveTab }: SkillsProps) {
               </p>
             </CardContent>
           </Card>
+          </motion.div>
         ))}
       </div>
     </section>

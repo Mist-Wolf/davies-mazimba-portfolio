@@ -3,7 +3,7 @@ export const projects = [
     title: "Graceful Playgrounds Church Site",
     image: "/images/graceful.png",
     description:
-      "A static church website still in development.",
+      "A responsive church website built to make community information easy to discover.",
     stack: ["React", "Typescript", "Tailwind"],
     live_link: "https://mist-wolf.github.io/graceful-playgrounds",
     code_repo: "https://github.com/Mist-Wolf/graceful-playgrounds",
@@ -12,7 +12,6 @@ export const projects = [
     title: "Real Estate Website",
     image: "/images/portfolio_ui.png",
     description:
-      "Real estate website soon be intergrated with live school boarding house search(Still in development).",
+      "A real estate platform in development, with plans for live school boarding-house search.",
     stack: ["Laravel", "React", "inertiajs", "Tailwind CSS", "Vite"],
-    code_repo: "https://github.com/username/portfolio",
   }]

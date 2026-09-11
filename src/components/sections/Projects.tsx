@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react"; // adjust imports
 import { projects as projectsData } from "../../data/projects"; // your projects data file
 
@@ -9,14 +10,17 @@ interface ProjectsProps {
 export function Projects({ dark }: ProjectsProps) {
   return (
     <section id="projects" className="max-w-6xl mx-auto px-6 py-16">
-      <h2 className="text-3xl font-bold mb-12 text-cyan-500 dark:text-cyan-300">
-        My Projects
-      </h2>
+      <p className="text-sm uppercase tracking-[0.25em] text-cyan-300">Selected work</p>
+      <h2 className={`mt-2 text-4xl font-bold tracking-tight mb-10 ${dark ? "text-white" : "text-slate-900"}`}>Projects</h2>
       <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {projectsData.map((project) => (
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{ duration: 0.45 }}
             key={project.title}
-            className="flex flex-col rounded-2xl overflow-hidden shadow-xl border border-gray-300 dark:border-white/10 backdrop-blur-md bg-white/80 dark:bg-white/10 hover:scale-[1.02] transform transition duration-300"
+            className="flex flex-col rounded-3xl overflow-hidden shadow-xl border border-white/10 backdrop-blur-md bg-white/[0.07] hover:-translate-y-2 hover:border-emerald-300/40 transform transition duration-300"
           >
             <img
               src={`${import.meta.env.BASE_URL}${project.image.replace(/^\//, '')}`}
@@ -27,14 +31,14 @@ export function Projects({ dark }: ProjectsProps) {
               <div>
                 <h3
                   className={`text-xl font-semibold mb-2 ${
-                    dark ? "text-cyan-500" : "text-gray-500"
+                    dark ? "text-cyan-300" : "text-gray-500"
                   }`}
                 >
                   {project.title}
                 </h3>
                 <p
                   className={`text-sm ${
-                    dark ? "text-gray-600" : "text-gray-700"
+                    dark ? "text-gray-300" : "text-gray-700"
                   } mb-4`}
                 >
                   {project.description}
@@ -79,7 +83,7 @@ export function Projects({ dark }: ProjectsProps) {
                 )}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
