@@ -11,7 +11,7 @@ interface NavbarProps {
 const sections = ["about", "experience", "education", "skills", "projects", "contact"];
 
 const socialLinks = [
-  { href: "https://linkedin.com/in/Davies", icon: <Linkedin /> },
+  //{ href: "https://linkedin.com/in/Davies", icon: <Linkedin /> },
   { href: "https://wa.me/260970193419?text=Hi%20I%20found%20your%20portfolio%20and%20would%20like%20to%20get%20in%20touch.", icon: <span className="pi pi-whatsapp"></span> },
   { href: "https://www.github.com/Mist-Wolf/", icon: <Github /> },
 ];
@@ -27,7 +27,7 @@ export const Navbar = ({ dark, setDark }: NavbarProps) => {
         
         {/* Logo */}
         <h1 className={`text-2xl font-bold tracking-tight ${dark ? "text-green-300" : "text-emerald-700"}`}>
-          Davies<span className={dark ? "text-white/40" : "text-slate-400"}>.</span>
+          Mist-Wolf<span className={dark ? "text-white/40" : "text-slate-400"}>.</span>
         </h1>
 
         {/* Mobile toggle */}
@@ -80,7 +80,7 @@ export const Navbar = ({ dark, setDark }: NavbarProps) => {
             <a
               key={section}
               href={`#${section}`}
-              onClick={() => setMobileNavOpen(false)}
+              //onClick={() => setMobileNavOpen(false)}
               className="hover:underline transition-colors duration-200"
             >
               {section.charAt(0).toUpperCase() + section.slice(1)}
