@@ -11,12 +11,12 @@ export interface ContactItem {
 
 export const contact: ContactItem[] = [
   { label: "Email", href: "mailto:mazimbabwalya@gmail.com", icon: <Mail /> },
-  {
+  /*{
     label: "LinkedIn",
     href: "https://linkedin.com/in/Davies",
     icon: <Linkedin />,
     external: true,
-  },
+  },*/
   {
     label: "GitHub",
     href: "https://github.com/Mist-Wolf",
