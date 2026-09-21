@@ -8,7 +8,7 @@ export default defineConfig({
   // optimizeDeps: {
   //   exclude: ['lucide-react'],
   // },
-   base: "/developer-portfolio/",
+   base: "/davies-mazimba-portfolio/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
