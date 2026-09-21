@@ -9,9 +9,10 @@ export const projects = [
     code_repo: "https://github.com/Mist-Wolf/graceful-playgrounds",
   },
   {
-    title: "Real Estate Website",
-    image: "/images/portfolio_ui.png",
-    description:
-      "A real estate platform in development, with plans for live school boarding-house search.",
-    stack: ["Laravel", "React", "inertiajs", "Tailwind CSS", "Vite"],
+  title: "Python ETL Pipeline",
+  image: "/images/etl.png",
+  description:
+  "A Python-based ETL pipeline currently in progress, designed to load, profile, clean, validate, and transform structured patient record data while maintaining data accuracy and consistency.",
+  stack: ["Python", "Pandas", "ETL", "Data Cleaning"],
+  code_repo: "https://github.com/Mist-Wolf/automated-etl-pipeline"
   }]
